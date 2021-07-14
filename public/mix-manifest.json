@@ -1,4 +1,22 @@
 {
     "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css"
+    "/css/pages/email.css": "/css/pages/email.css",
+    "/css/pages/error.css": "/css/pages/error.css",
+    "/css/pages/auth.css": "/css/pages/auth.css",
+    "/css/bootstrap.css": "/css/bootstrap.css",
+    "/css/app.css": "/css/app.css",
+    "/css/widgets/todo.css": "/css/widgets/todo.css",
+    "/css/widgets/chat.css": "/css/widgets/chat.css",
+    "/css/pages/chat.css": "/css/pages/chat.css",
+    "/vendors/bower.json": "/vendors/bower.json",
+    "/vendors/CHANGELOG.md": "/vendors/CHANGELOG.md",
+    "/vendors/composer.json": "/vendors/composer.json",
+    "/vendors/jquery.tinymce.js": "/vendors/jquery.tinymce.js",
+    "/vendors/jquery.tinymce.min.js": "/vendors/jquery.tinymce.min.js",
+    "/vendors/license.txt": "/vendors/license.txt",
+    "/vendors/package.json": "/vendors/package.json",
+    "/vendors/README.md": "/vendors/README.md",
+    "/vendors/tinymce.d.ts": "/vendors/tinymce.d.ts",
+    "/vendors/tinymce.js": "/vendors/tinymce.js",
+    "/vendors/tinymce.min.js": "/vendors/tinymce.min.js"
 }
