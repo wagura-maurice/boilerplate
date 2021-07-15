@@ -41,7 +41,7 @@ class Seed extends Command
     {
         try {
             // logic for running though Orangehill's Iseed commands.
-            Artisan::call('iseed settings,roles,permissions,permission_role,users,role_user --force');
+            Artisan::call('iseed settings,roles,permissions,permission_role --force');
 
         } catch (\Throwable $th) {
             // throw $th;

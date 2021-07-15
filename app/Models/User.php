@@ -51,6 +51,29 @@ class User extends Authenticatable implements MustVerifyEmail
         'email_verified_at' => 'datetime'
     ];
 
+    /**
+     * The attributes to be appended on each retrieval.
+     *
+     * @var array
+     */
+    protected $appends = [
+        'isAdministrator',
+        'isManager',
+        'isGuest'
+    ];
+
+    public function getIsAdministrator() {
+        return auth()->user()->roles->contains('name', 'administrator');
+    }
+
+    public function getIsManager() {
+        return auth()->user()->roles->contains('name', 'manager');
+    }
+
+    public function getIsGuest() {
+        return auth()->user()->roles->contains('name', 'guest');
+    }
+
     public function roles()
     {
         return $this->belongsToMany(Role::class)->withTimestamps();

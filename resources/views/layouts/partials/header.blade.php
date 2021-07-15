@@ -41,38 +41,35 @@
                     <a href="#" data-bs-toggle="dropdown" aria-expanded="false">
                         <div class="user-menu d-flex">
                             <div class="user-name text-end me-3">
-                                <h6 class="mb-0 text-gray-600">{{ Auth::user()->name }}</h6>
-                                <p class="mb-0 text-sm text-success">Online</p>
+                                <h6 class="mb-0 text-gray-600">{!! ucwords(Auth::user()->name) !!}</h6>
+                                <p class="mb-0 text-sm text-gray-600">{!! ucwords(Auth::user()->isAdministrator ? 'administrator' : (Auth::user()->isManager ? 'manager' : 'guest')) !!}</p>
                             </div>
                             <div class="user-img d-flex align-items-center">
                                 <div class="avatar avatar-md">
-                                    <img src="{{ asset('/images/faces/1.jpg') }}">
+                                    <img src="{!! Auth::user()->gravatar !!}" alt="{!! Auth::user()->name !!}">
                                 </div>
                             </div>
                         </div>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
                         <li>
-                            <h6 class="dropdown-header">Hello, {{ strtok(Auth::user()->name, " ") }}!</h6>
+                            <h6 class="dropdown-header">Hello, {!! ucwords(Auth::user()->name) !!}.</h6>
                         </li>
-                        <li>
-                            <a class="dropdown-item" href="#"><i class="icon-mid bi bi-person me-2"></i> My
-                                Profile</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#"><i class="icon-mid bi bi-gear me-2"></i>
-                            {{ __('API Tokens') }}
-                            </a>
-                        </li>
+                        <li><a class="dropdown-item" href="#"><i class="icon-mid bi bi-person me-2"></i> My
+                                Profile</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="icon-mid bi bi-gear me-2"></i>
+                                Settings</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="icon-mid bi bi-wallet me-2"></i>
+                                Wallet</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
                         <li>
-                            <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                            <a class="dropdown-item" href="{!! route('logout') !!}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                 <i class="icon-mid bi bi-box-arrow-left me-2"></i>
-                                {{ __('Logout') }}
-                            </a>    
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                {!! __('Logout') !!}
+                            </a>
+                            <form id="logout-form" action="{!! route('logout') !!}" method="POST" style="display: none;">
                                 @csrf
                             </form>
                         </li>

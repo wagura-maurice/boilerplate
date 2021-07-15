@@ -1,5 +1,7 @@
 {
     "/js/app.js": "/js/app.js",
+    "/js/bootstrap.bundle.min.js": "/js/bootstrap.bundle.min.js",
+    "/js/main.js": "/js/main.js",
     "/css/pages/email.css": "/css/pages/email.css",
     "/css/pages/error.css": "/css/pages/error.css",
     "/css/pages/auth.css": "/css/pages/auth.css",
@@ -8,6 +10,7 @@
     "/css/widgets/todo.css": "/css/widgets/todo.css",
     "/css/widgets/chat.css": "/css/widgets/chat.css",
     "/css/pages/chat.css": "/css/pages/chat.css",
+    "/js/bootstrap.bundle.min.js.map": "/js/bootstrap.bundle.min.js.map",
     "/vendors/bower.json": "/vendors/bower.json",
     "/vendors/CHANGELOG.md": "/vendors/CHANGELOG.md",
     "/vendors/composer.json": "/vendors/composer.json",

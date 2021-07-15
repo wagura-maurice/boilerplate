@@ -12,6 +12,10 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
+    .js('node_modules/bootstrap/dist/js/bootstrap.bundle.min.js', 'public/js')
+    .copy('node_modules/bootstrap/dist/js/bootstrap.bundle.min.js.map', 'public/js')
+    .js('resources/js/main.js', 'public/js')
+    // .js('resources/js/vendors.js', 'public/js')
     .react()
     .sass('resources/scss/app.scss', 'public/css')
     .sass('resources/scss/bootstrap.scss', 'public/css')
