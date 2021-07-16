@@ -14,8 +14,8 @@
         <!-- Styles -->
         <link rel="stylesheet" href="{!! mix('css/bootstrap.css') !!}">
         <!-- Vendors -->
-        <link rel="stylesheet" href="{!! asset('vendors/css/perfect-scrollbar.css') !!}">
-        <link rel="stylesheet" href="{!! asset('vendors/font/bootstrap-icons.css') !!}">
+        <link rel="stylesheet" href="{!! asset('vendors/perfect-scrollbar.css') !!}">
+        <link rel="stylesheet" href="{!! asset('vendors/bootstrap-icons.css') !!}">
 
         <link rel="stylesheet" href="{!! mix('css/app.css') !!}">
         <link rel="stylesheet" href="{!! mix('css/pages/auth.css') !!}">
@@ -30,7 +30,7 @@
                 <div class="col-lg-5 col-12">
                 <div id="auth-left">
                     <div class="auth-logo">
-                        <a href="{!! url('/') !!}"><img src="{!! asset('images/logo.png') !!}" alt="{!! config('app.name') !!}"></a>
+                        <a href="{!! url('/') !!}"><img src="{!! asset('images/logo/logo.png') !!}" alt="{!! config('app.name') !!}"></a>
                     </div>
                     @yield('content')
                 </div>
@@ -45,6 +45,6 @@
         </div>
         <!-- Scripts -->
         <script type="text/javascript" src="{!! mix('js/app.js') !!}"></script>
-        <script type="text/javascript" src="{!! asset('vendors/dist/perfect-scrollbar.min.js') !!}"></script>
+        <script type="text/javascript" src="{!! asset('vendors/perfect-scrollbar.min.js') !!}"></script>
     </body>
 </html>

@@ -5,8 +5,8 @@
 <!-- Styles -->
 <link rel="stylesheet" href="{!! mix('css/bootstrap.css') !!}">
 <!-- Vendors -->
-<link rel="stylesheet" href="{!! asset('vendors/css/perfect-scrollbar.css') !!}">
-<link rel="stylesheet" href="{!! asset('vendors/font/bootstrap-icons.css') !!}">
+<link rel="stylesheet" href="{!! asset('vendors/perfect-scrollbar.css') !!}">
+<link rel="stylesheet" href="{!! asset('vendors/bootstrap-icons.css') !!}">
 
 <link rel="stylesheet" href="{!! mix('css/app.css') !!}">
 

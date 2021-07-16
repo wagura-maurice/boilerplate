@@ -1,4 +1,4 @@
-const mix = require('laravel-mix');
+const mix = require("laravel-mix");
 
 /*
  |--------------------------------------------------------------------------
@@ -11,21 +11,45 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-    .js('node_modules/bootstrap/dist/js/bootstrap.bundle.min.js', 'public/js')
-    .copy('node_modules/bootstrap/dist/js/bootstrap.bundle.min.js.map', 'public/js')
-    .js('resources/js/main.js', 'public/js')
+mix.js("resources/js/app.js", "public/js")
     .react()
-    .sass('resources/scss/app.scss', 'public/css')
-    .sass('resources/scss/bootstrap.scss', 'public/css')
-    .sass('resources/scss/pages/auth.scss', 'public/css/pages')
-    .sass('resources/scss/pages/error.scss', 'public/css/pages')
-    .sass('resources/scss/pages/email.scss', 'public/css/pages')
-    .sass('resources/scss/pages/chat.scss', 'public/css/pages')
-    .sass('resources/scss/widgets/chat.scss', 'public/css/widgets')
-    .sass('resources/scss/widgets/todo.scss', 'public/css/widgets')
-    .copy([
-        'node_modules/perfect-scrollbar',
-        'node_modules/bootstrap-icons',
-        'node_modules/tinymce'
-    ], 'public/vendors');
+    .copy(
+        [
+            "resources/dist/assets/js/bootstrap.bundle.min.js",
+            "resources/dist/assets/js/bootstrap.min.js.map",
+            "resources/dist/assets/js/main.js",
+        ],
+        "public/js"
+    )
+    .copy(
+        [
+            "resources/dist/assets/css/app.css",
+            "resources/dist/assets/css/bootstrap.css",
+        ],
+        "public/css"
+    )
+    .copy(
+        [
+            "resources/dist/assets/css/pages/auth.css",
+            "resources/dist/assets/css/pages/error.css",
+            "resources/dist/assets/css/pages/email.css",
+            "resources/dist/assets/css/pages/chat.css",
+        ],
+        "public/css/pages"
+    )
+    .copy(
+        [
+            "resources/dist/assets/css/widgets/chat.css",
+            "resources/dist/assets/css/widgets/todo.css",
+        ],
+        "public/css/widgets"
+    )
+    .copy(
+        [
+            "resources/dist/assets/vendors/perfect-scrollbar",
+            "resources/dist/assets/vendors/bootstrap-icons",
+            "resources/dist/assets/vendors/tinymce",
+        ],
+        "public/vendors"
+    )
+    .copy(["resources/dist/assets/images"], "public/images");
